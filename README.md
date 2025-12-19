@@ -7,12 +7,25 @@ White blood cell images, even with staining, can be very similar and difficult t
 
 The program takes in images (downloaded, and in the same folder as the code being run) that are sorted into folders but not labeled. The input folders are training, test, and validation data, but the program also takes a subsection of the training data for validation. 
 
-My solution uses pytorch, tensor, and imagenet. I generated the base code using Smith's Open AI GPT-5-mini. 
+My solution uses pytorch, tensor, and imagenet. I generated the base code using Smith College's Open AI GPT-5-mini. 
 
 I attempted to train the model using 8 epochs, but it had only completed 4 epoches after 24 hours. I was still able to run the later code since the information on the latest iteration of the model is stored as a separate document. The model would have benefitted from further iterations. 
 
 ## Packages used: 
 os, csv, random, numpy, PIL/pillow, tqdm, torch, torch.nn, torchvision, scikit learn/sklearn, pandas, pyplot, glob, zipfile, Path
+
+## Dataset acquisition
+Unfortunately, there are too many files for GitHub to happily deal with the images. The dataset can be downloaded at the kaggle link above or with the following code once kaggle and API keys are set up. 
+
+>import kagglehub
+>
+>#Download latest version
+>
+>path = kagglehub.dataset_download("andrewmvd/leukemia-classification")
+>
+>print("Path to dataset files:", path)
+
+*Code source: kaggle website* 
 
 ## How to run
 leukemiaGPT1.ipynb is the main file. Each block can be run sequentially from the top. The Train Head block can be interrupted if taking too long and a model will still be created as long as one epoch is complete. The Fine-Tune block can be skipped if needed for time. If using the default model, training blocks and training helpers can be skipped as the next step is loading back in the "best" model. 
@@ -23,20 +36,20 @@ leukemiaGPT1.py is the original file that I used to generate the model. The cons
 leukemia-classification is the folder containing all of the images (as well as the labels for the validation set). Images are all .bmp but the program is also set up to handle .png .jpg .jpeg .tif and .tiff files. 
 Image organization: 
 - C-NMC-Leukemia
-- - testing_data
-  - - C-NMC_test_final_phase_data
+  - testing_data
+    - C-NMC_test_final_phase_data
   - training_data
-  - - fold_0
-    - - all
+    - fold_0
+      - all
       - hem
     - fold_1
-    - - all
+      - all
       - hem
     - fold_2
-    - - all
+      - all
       - hem
   - validation_data
-  - - C-NMC_test_prelim_phase_data
+    - C-NMC_test_prelim_phase_data
     - C-NMC_test_prelim_phase_data_labels.csv
    
   
