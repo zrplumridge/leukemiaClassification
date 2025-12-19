@@ -1,5 +1,5 @@
 # leukemia Classification
-##Final project for CSC334 Biomedical Big Data: Using Machine Learning for Bioinformatics. 
+## Final project for CSC334 Biomedical Big Data: Using Machine Learning for Bioinformatics. 
 Image analysis of acute lymphoblastic leukemia and non-leukemia cells. 
 Data source: https://www.kaggle.com/datasets/andrewmvd/leukemia-classification
 
