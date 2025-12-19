@@ -1,0 +1,43 @@
+(base) zplumridge@jupyterhub:~/334$ python leukemiaGPT1.py
+Device: cpu
+Found 10662 labeled train images, 1868 unlabeled val images, 2586 unlabeled test images
+Train splits -> train: 9596 val(labelled): 1066
+pos_count (train): 6547 neg_count: 3049
+/Users/zplumridge/.local/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/zplumridge/.local/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Starting head training...
+Training epoch
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+ Evaluating Model
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+[Head] Epoch 1/8  train_loss=0.3078 train_auc=0.8505 train_acc=0.7868  val_loss=0.4116 val_auc=0.8792 val_acc=0.6848
+Saved best model (head) with val_auc: 0.8792416140009722
+Training epoch
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Evaluating Model
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+[Head] Epoch 2/8  train_loss=0.2700 train_auc=0.8850 train_acc=0.8166  val_loss=0.3230 val_auc=0.9156 val_acc=0.8386
+Saved best model (head) with val_auc: 0.9155971479500892
+Training epoch
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Evaluating Model
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+[Head] Epoch 3/8  train_loss=0.2446 train_auc=0.9057 train_acc=0.8374  val_loss=0.5019 val_auc=0.8525 val_acc=0.6886
+Training epoch
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Evaluating Model
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+[Head] Epoch 4/8  train_loss=0.2242 train_auc=0.9204 train_acc=0.8586  val_loss=1.4657 val_auc=0.1944 val_acc=0.6811
+Training epoch
+/Users/zplumridge/.local/lib/python3.12/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
