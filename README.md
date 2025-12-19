@@ -53,4 +53,7 @@ Image organization:
     - C-NMC_test_prelim_phase_data_labels.csv
    
   
-The program creates a folder called output_pytorch. This contains representations of the models created saved as files best_resnet50.pth and resnet50_final.pth. It also creates predictions_testing_with_gt.csv (which does not actually use ground_truth due to lack of labels but is the modified version of) predictions_testing.csv, predictions_validation_with_gt.csv, and predictions_validation.csv, which are human-readable. 
+The program creates a folder called output_pytorch. This contains representations of the models created saved as files best_resnet50.pth and resnet50_final.pth. It also creates predictions_testing_with_gt.csv (which does not actually use ground_truth due to lack of labels but is the modified version of) predictions_testing.csv, predictions_validation_with_gt.csv, and predictions_validation.csv, which are human-readable.
+
+## Legal Disclaimer
+This needs a lot more work before it can even remotely be considered for medical use. Do not use as medical advice. The creator may be a medical doctor eventually but is not at the time of creating this. 
