@@ -1,4 +1,4 @@
-# leukemia Classification
+# Leukemia Classification
 ## Final project for CSC334 Biomedical Big Data: Using Machine Learning for Bioinformatics. 
 Image analysis of acute lymphoblastic leukemia and non-leukemia cells. 
 Data source: https://www.kaggle.com/datasets/andrewmvd/leukemia-classification
@@ -38,4 +38,6 @@ Image organization:
   - validation_data
   - - C-NMC_test_prelim_phase_data
     - C-NMC_test_prelim_phase_data_labels.csv
+   
+  
 The program creates a folder called output_pytorch. This contains representations of the models created saved as files best_resnet50.pth and resnet50_final.pth. It also creates predictions_testing_with_gt.csv (which does not actually use ground_truth due to lack of labels but is the modified version of) predictions_testing.csv, predictions_validation_with_gt.csv, and predictions_validation.csv, which are human-readable. 
