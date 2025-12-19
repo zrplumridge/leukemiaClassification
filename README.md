@@ -9,7 +9,7 @@ The program takes in images (downloaded, and in the same folder as the code bein
 
 My solution uses pytorch, tensor, and imagenet. I generated the base code using Smith College's Open AI GPT-5-mini. 
 
-I attempted to train the model using 8 epochs, but it had only completed 4 epoches after 24 hours. I was still able to run the later code since the information on the latest iteration of the model is stored as a separate document. The model would have benefitted from further iterations. 
+I attempted to train the model using 8 epochs, but it had only completed 4 epoches after 24 hours. I was still able to run the later code since the information on the latest iteration of the model is stored as a separate document. The model would have benefitted from further iterations. Ideally I would be able to upload the model, but it is unfortunately too large for GitHub and I do not want to involve GitLFS. 
 
 ## Packages used: 
 os, csv, random, numpy, PIL/pillow, tqdm, torch, torch.nn, torchvision, scikit learn/sklearn, pandas, pyplot, glob, zipfile, Path
@@ -29,6 +29,7 @@ Unfortunately, there are too many files for GitHub to happily deal with the imag
 
 ## How to run
 leukemiaGPT1.ipynb is the main file. Each block can be run sequentially from the top. The Train Head block can be interrupted if taking too long and a model will still be created as long as one epoch is complete. The Fine-Tune block can be skipped if needed for time. If using the default model, training blocks and training helpers can be skipped as the next step is loading back in the "best" model. 
+*Update: the default model is too large to be uploaded to github. Instead, I would recommend starting this code in the background and doing other activities for a day or so. Even with parameters decreased, it requires a long runtime on cpu and I was unable to test it on gpu. 
 
 ## Files
 All files should be in the same folder. 
